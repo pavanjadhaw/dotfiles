@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -e
+
+# gclw (git clone worktree)
+# gclw git@github.com:name/repo.git => clones to repo dir
+# gclw git@github.com:name/repo.git new_repo => clones to my_repo dir
+url=$1
+basename=${url##*/}
+name=${2:-${basename%.*}}
+
+mkdir $name
+cd "$name"
+
+# moves all the administrative git files (a.k.a $git_dir) under .bare directory.
+#
+# plan is to create worktrees as siblings of this directory.
+# example targeted structure:
+# .bare
+# main
+# new-awesome-feature
+# hotfix-bug-12
+# ...
+git clone --bare "$url" .bare
+echo "gitdir: ./.bare" >.git
+
+# explicitly sets the remote origin fetch so we can fetch remote branches
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+
+# Gets all branches from origin
+git fetch origin
+
+mainworktreelabel="${name}-main"
+
+git worktree add $mainworktreelabel main || git worktree add $mainworktreelabel master

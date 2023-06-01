@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+on_macbook=$(yabai -m query --displays | jq '. | length == 1 and .[0].id == 1')
+
+if [ $on_macbook == true ]; then
+	osascript ~/.local/bin/osx-scripts/show-menubar.scpt
+else
+	osascript ~/.local/bin/osx-scripts/autohide-menubar.scpt
+fi
