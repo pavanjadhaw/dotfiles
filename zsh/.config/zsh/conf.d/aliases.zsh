@@ -1,0 +1,6 @@
+alias v="nvim"
+alias e="code"
+alias ghpr="gh pr create --web"
+alias lg="lazygit"
+alias :q="exit"
+alias rcopy="rclone copy remote:/ . --progress"

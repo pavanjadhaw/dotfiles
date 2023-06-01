@@ -1,0 +1,13 @@
+[user]
+	name = Pavan Jadhaw
+	email = pavanjadhaw96@gmail.com
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[status]
+	short = false
+[core]
+	excludesfile = ~/.gitignore-global

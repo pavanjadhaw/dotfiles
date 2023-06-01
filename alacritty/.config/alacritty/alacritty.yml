@@ -1,0 +1,45 @@
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 1
+  decorations: buttonless
+
+  padding:
+    x: 30
+    y: 30
+  dynamic_padding: true
+
+font:
+  size: 14.0
+
+  normal:
+    family: JetBrainsMono Nerd Font Mono
+    style: Regular
+
+  bold:
+    style: Regular
+
+  italic:
+    style: Italic
+
+  bold_italic:
+    style: Italic
+
+  offset:
+    x: 0
+    y: 0
+
+draw_bold_text_with_bright_colors: true
+live_config_reload: true
+
+selection:
+  save_to_clipboard: true
+
+import:
+  - ~/.config/alacritty/themes/mountain.yml
+
+cursor:
+  style:
+    shape: Block
+    blinking: Never

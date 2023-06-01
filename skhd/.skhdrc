@@ -1,0 +1,106 @@
+# open terminal
+alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# restart yabai
+alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+# reload skhd config
+alt - r : skhd -r
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+# alt - g : yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")"
+
+# Stack up
+# cmd - k : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+# Stack down
+cmd - j : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+# Bring the window to the right into the stack
+# alt - s : yabai -m window --stack next
+
+# move window
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# make floating window fill screen
+shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+
+# make floating window fill right-half of screen
+shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
+# fast focus desktop
+alt - 1 : yabai -m space --focus    1
+alt - 2 : yabai -m space --focus    2
+alt - 3 : yabai -m space --focus    3
+alt - 4 : yabai -m space --focus    4
+alt - 5 : yabai -m space --focus    5
+alt - 6 : yabai -m space --focus    6
+alt - 7 : yabai -m space --focus    7
+alt - 8 : yabai -m space --focus    8
+alt - 9 : yabai -m space --focus    9
+alt - 0 : yabai -m space --focus    10
+
+# fast focus next previous space
+# alt - n : yabai -m space --focus next
+# alt - p : yabai -m space --focus prev
+alt - n : yabai -m display --focus next
+alt - p : yabai -m display --focus prev
+# alt - n : yabai -m space --focus next || yabai -m space --focus first
+# alt - p : yabai -m space --focus prev || yabai -m space --focus last
+
+# send window to desktop
+shift + alt - 1 : yabai -m window --space    1
+shift + alt - 2 : yabai -m window --space    2
+shift + alt - 3 : yabai -m window --space    3
+shift + alt - 4 : yabai -m window --space    4
+shift + alt - 5 : yabai -m window --space    5
+shift + alt - 6 : yabai -m window --space    6
+shift + alt - 7 : yabai -m window --space    7
+shift + alt - 8 : yabai -m window --space    8
+shift + alt - 9 : yabai -m window --space    9
+shift + alt - 0 : yabai -m window --space    10
+
+# Resize windows
+alt - y : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+alt - u : \
+    yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+alt - i : \
+    yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+alt - o : \
+    yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0
+
+# rotate tree
+alt - r : yabai -m space --rotate 90
+
+# toggle desktop offset
+alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# toggle window fullscreen zoom
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window native fullscreen
+shift + alt - f : yabai -m window --toggle native-fullscreen
+
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 4:4:1:1:2:2
+
+
+# change layout of desktop
+ctrl + shift - w : yabai -m space --layout bsp
+ctrl + shift - a : yabai -m space --layout stack
+ctrl + shift - s : yabai -m space --layout float

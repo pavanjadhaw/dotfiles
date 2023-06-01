@@ -1,0 +1,28 @@
+# zsh-utils
+belak/zsh-utils path:editor
+belak/zsh-utils path:history
+belak/zsh-utils path:prompt
+belak/zsh-utils path:utility
+belak/zsh-utils path:completion
+
+# omz
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/tmux
+ohmyzsh/ohmyzsh path:plugins/yarn
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/asdf
+
+# prompt
+spaceship-prompt/spaceship-prompt kind:fpath
+
+# general
+mattmc3/zfunctions
+hlissner/zsh-autopair
+agkozak/zsh-z
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+zshzoo/zshrc.d
+zsh-users/zsh-history-substring-search
