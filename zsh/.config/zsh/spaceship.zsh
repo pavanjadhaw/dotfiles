@@ -23,5 +23,3 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_RPROMPT_ORDER=(
   # vi_mode       # Vi-mode indicator
 )
-
-autoload -Uz promptinit && promptinit && prompt spaceship
