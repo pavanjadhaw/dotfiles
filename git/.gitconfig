@@ -11,3 +11,7 @@
 	short = false
 [core]
 	excludesfile = ~/.gitignore-global
+[pull]
+	rebase = false
+[checkout]
+	defaultRemote = origin

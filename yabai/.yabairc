@@ -48,6 +48,7 @@ yabai -m config window_gap 0
 # Space config
 yabai -m config --space 2 layout stack
 yabai -m config --space 5 layout stack
+yabai -m config --space 6 layout stack
 yabai -m config --space 9 layout stack
 yabai -m config --space 10 layout stack
 
@@ -64,6 +65,10 @@ yabai -m rule --add app="Stats" manage=off
 yabai -m rule --add app="Chromium" manage=off
 yabai -m rule --add app="Toggl Track" manage=off
 yabai -m rule --add app="CleanShot X" manage=off
+yabai -m rule --add app="loom" manage=off
+yabai -m rule --add app="EVO" manage=off
+yabai -m rule --add app="Neurontube" manage=off
+yabai -m rule --add app="Mullvad VPN" manage=off
 
 # Code
 yabai -m rule --add app="Code" space=2
