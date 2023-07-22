@@ -40,3 +40,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # spaceship prompt
 export SPACESHIP_CONFIG=$ZDOTDIR/spaceship.zsh
+
+# goku
+export GOKU_EDN_CONFIG_FILE=~/.config/karabiner/karabiner.edn
