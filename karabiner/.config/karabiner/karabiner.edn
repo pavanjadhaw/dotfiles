@@ -20,18 +20,17 @@
 
 {:profiles
 
- :devices {:rk61 [{:vendor_id 9639 :product_id 64112}]}
-
  {:default {:default true
             :sim 50
             :held 500
             :delay 500
             :alone 1000}}
 
+ :devices {:rk61 [{:vendor_id 9639 :product_id 64112}]}
+
  :simlayer-threshold 250
 
  :simlayers {:space-mode {:key :spacebar}}
- 
 
  :main [{:des "Space Mode"
          :rules [:space-mode
