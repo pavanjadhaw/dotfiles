@@ -69,6 +69,8 @@ yabai -m rule --add app="loom" manage=off
 yabai -m rule --add app="EVO" manage=off
 yabai -m rule --add app="Neurontube" manage=off
 yabai -m rule --add app="Mullvad VPN" manage=off
+yabai -m rule --add app="VLC" manage=off
+yabai -m rule --add app="IINA" manage=off
 
 # Code
 yabai -m rule --add app="Code" space=2
@@ -87,7 +89,7 @@ yabai -m rule --add app="Signal" space=5
 # yabai -m rule --add app="zoom.us"               space=5
 
 # Media
-yabai -m rule --add app="VLC" manage=off space=6
+#yabai -m rule --add app="VLC" manage=off space=6
 yabai -m rule --add app="Spotify" space=6
 yabai -m rule --add app="Music" space=6
 
