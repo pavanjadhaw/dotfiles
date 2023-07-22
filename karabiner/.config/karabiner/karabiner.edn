@@ -1,0 +1,48 @@
+;; This is the meaning of the key modifiers
+;;
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+;;
+;; karabiner definition of mandatory and optional
+;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
+
+{:profiles
+
+ :devices {:rk61 [{:vendor_id 9639 :product_id 64112}]}
+
+ {:default {:default true
+            :sim 50
+            :held 500
+            :delay 500
+            :alone 1000}}
+
+ :simlayer-threshold 250
+
+ :simlayers {:space-mode {:key :spacebar}}
+ 
+
+ :main [{:des "Space Mode"
+         :rules [:space-mode
+                 [:h :left_arrow]
+                 [:j :down_arrow]
+                 [:k :up_arrow]
+                 [:l :right_arrow]]}
+
+        {:des "Bring backtick and tilde on first function on 60% keyboard"
+         :rules [[:##escape :grave_accent_and_tilde [:rk61]]]}
+
+        {:des "Caps Lock to Escape on single press, Control on press and hold."
+         :rules [[:##caps_lock :left_control nil {:alone :escape}]]}]}
+
