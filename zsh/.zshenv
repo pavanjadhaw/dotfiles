@@ -23,7 +23,7 @@ path=(
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-export GPG_TTY=$(tty)
+export GPG_TTY=`tty`
 
 export ZSH_TMUX_AUTOSTART=true
 export NODE_ENV=development

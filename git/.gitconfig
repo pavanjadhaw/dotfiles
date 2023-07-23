@@ -1,6 +1,7 @@
 [user]
 	name = Pavan Jadhaw
 	email = pavanjadhaw96@gmail.com
+	signingkey = 756D30C8F549F405
 [init]
 	defaultBranch = main
 [push]
@@ -15,3 +16,5 @@
 	rebase = false
 [checkout]
 	defaultRemote = origin
+[commit]
+	gpgsign = true
