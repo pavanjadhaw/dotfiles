@@ -7,3 +7,6 @@
 .zsh_plugins.zsh
 
 assets
+
+tmux/.tmux/plugins/
+

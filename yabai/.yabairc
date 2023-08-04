@@ -47,10 +47,10 @@ yabai -m config window_gap 0
 
 # Space config
 yabai -m config --space 2 layout stack
+yabai -m config --space 4 layout stack
 yabai -m config --space 5 layout stack
 yabai -m config --space 6 layout stack
-yabai -m config --space 9 layout stack
-yabai -m config --space 10 layout stack
+yabai -m config --space 10 layout float
 
 yabai -m config --space 7 layout float
 
@@ -63,9 +63,7 @@ yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="Wave Link" manage=off
 yabai -m rule --add app="Stats" manage=off
 yabai -m rule --add app="Chromium" manage=off
-yabai -m rule --add app="Toggl Track" manage=off
 yabai -m rule --add app="CleanShot X" manage=off
-yabai -m rule --add app="loom" manage=off
 yabai -m rule --add app="EVO" manage=off
 yabai -m rule --add app="Neurontube" manage=off
 yabai -m rule --add app="Mullvad VPN" manage=off
@@ -76,9 +74,7 @@ yabai -m rule --add app="IINA" manage=off
 yabai -m rule --add app="Code" space=2
 
 # Web
-# yabai -m rule --add app="Google Chrome"         space=3
-yabai -m rule --add app="Firefox" space=3
-yabai -m rule --add app="Firefox Developer Edition" space=10
+yabai -m rule --add app="Arc" space=3
 
 # Communication
 yabai -m rule --add app="Slack" space=5
@@ -86,18 +82,18 @@ yabai -m rule --add app="Discord" space=5
 yabai -m rule --add app="Telegram" space=5
 yabai -m rule --add app="WhatsApp" space=5
 yabai -m rule --add app="Signal" space=5
-# yabai -m rule --add app="zoom.us"               space=5
+yabai -m rule --add app="zoom.us" space=5
+
+# Notes and Things
+yabai -m rule --add app="Things" space=4
+yabai -m rule --add app="Obsidian" space=4
+yabai -m rule --add app="Notion" space=4
 
 # Media
-#yabai -m rule --add app="VLC" manage=off space=6
 yabai -m rule --add app="Spotify" space=6
 yabai -m rule --add app="Music" space=6
 
 yabai -m rule --add app="qBittorrent" manage=off space=7
 
-yabai -m rule --add app="Things" space=9
-yabai -m rule --add app="Obsidian" space=9
-yabai -m rule --add app="Notion" space=9
-
-yabai -m signal --add event=display_added action="sh ~/.local/bin/autohide-menubar-on-monitor"
-yabai -m signal --add event=display_removed action="sh ~/.local/bin/autohide-menubar-on-monitor"
+# yabai -m signal --add event=display_added action="sh ~/.local/bin/autohide-menubar-on-monitor"
+# yabai -m signal --add event=display_removed action="sh ~/.local/bin/autohide-menubar-on-monitor"
