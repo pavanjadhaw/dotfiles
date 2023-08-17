@@ -211,6 +211,9 @@
           } ],
           "conditions" : [ {
             "identifiers" : [ {
+              "vendor_id" : 9610,
+              "product_id" : 225
+            }, {
               "vendor_id" : 9639,
               "product_id" : 64112
             } ],

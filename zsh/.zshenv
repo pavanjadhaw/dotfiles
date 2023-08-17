@@ -45,4 +45,4 @@ export SPACESHIP_CONFIG=$ZDOTDIR/spaceship.zsh
 export GOKU_EDN_CONFIG_FILE=~/.config/karabiner/karabiner.edn
 
 # fix tmux fonts
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8

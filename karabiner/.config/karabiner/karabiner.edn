@@ -26,7 +26,10 @@
             :delay 500
             :alone 1000}}
 
- :devices {:rk61 [{:vendor_id 9639 :product_id 64112}]}
+ :devices {
+           :rk61wired [{:vendor_id 9610 :product_id 225}]
+           :rk61wireless [{:vendor_id 9639 :product_id 64112}]
+          }
 
  :simlayer-threshold 250
 
@@ -40,7 +43,7 @@
                  [:l :right_arrow]]}
 
         {:des "Bring backtick and tilde on first function on 60% keyboard"
-         :rules [[:##escape :grave_accent_and_tilde [:rk61]]]}
+         :rules [[:##escape :grave_accent_and_tilde [:rk61wired :rk61wireless]]]}
 
         {:des "Caps Lock to Escape on single press, Control on press and hold."
          :rules [[:##caps_lock :left_control nil {:alone :escape}]]}]}
