@@ -6,6 +6,8 @@
 
 .zsh_plugins.zsh
 
+*.zwc
+
 assets
 
 tmux/.tmux/plugins/
