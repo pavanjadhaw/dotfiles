@@ -1,0 +1,44 @@
+import = ["/home/pawan/.config/alacritty/themes/mountain.toml"]
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor.style]
+blinking = "Never"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10.0
+
+[font.bold]
+style = "Regular"
+
+[font.bold_italic]
+style = "Italic"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 1
+
+[window.padding]
+x = 10
+y = 10
